@@ -11,14 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150625205200) do
+ActiveRecord::Schema.define(version: 20150703232320) do
 
-  create_table "groups", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "horario"
-    t.string   "nivel"
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "rfc"
+    t.string   "phone"
+    t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "monday"
+    t.integer  "tuesday"
+    t.integer  "wednesday"
+    t.integer  "thursday"
+    t.integer  "friday"
+    t.string   "time_class"
+    t.string   "level"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "teacher_id"
+    t.string   "state"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "name"
+    t.string   "last_name"
+    t.string   "mother_name"
+    t.string   "rfc"
+    t.string   "phone"
+    t.string   "mail"
+    t.string   "user_name"
+    t.string   "password"
+    t.string   "birthday"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "group_id"
+    t.integer  "company_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -34,6 +66,9 @@ ActiveRecord::Schema.define(version: 20150625205200) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "weekley_reports", force: :cascade do |t|
   end
 
 end
