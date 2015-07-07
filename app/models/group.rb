@@ -6,4 +6,5 @@ class Group < ActiveRecord::Base
     validates :time_class, presence: true, length: { minimum: 5, maximum: 10 }
     validates :level, presence: true
     validates :state, presence: true
+    validates :teacher_id, presence: true
 end

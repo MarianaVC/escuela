@@ -1,0 +1,44 @@
+<br></br>
+<h1>This is the group index</h1>
+<hr/>
+
+<% @groups.each do |group| %>
+<div class = "row">
+    <div class= "col-md-2">
+        <section class="teacher_info center">
+            <%= gravatar_for group.teacher, size: 100 %>
+            <h5>Teacher name: <%= group.teacher.name %></h5>
+        </section>
+    </div>
+    
+    <div class="col-lg-8 well">
+        <h4>
+            <%=link_to group.name, group_path(group)%>
+        </h4>
+        
+        <p>
+            <strong>Class duration: </strong><%= group.time_class %>
+        </p>
+        <p>
+            <strong>Group level: </strong><%= group.level %>
+        </p>
+        <p>
+           <strong>Group state: </strong><%= group.state %>
+        </p>
+        <p>
+            <strong>Teacher id: </strong><%= group.teacher_id %>
+        </p>
+        <p>
+            <span class="quiet">
+                <small><%=time_ago_in_words(group.created_at) %> ago
+                
+                </small>
+            
+            </span>
+            
+        </p>
+    </div>
+</div>
+<hr/>
+
+<% end %>

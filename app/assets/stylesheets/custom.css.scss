@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 #logo {
     margin-top: 25px;
@@ -21,8 +22,7 @@
 
 body {
     height: 100%;
-    padding-top: 25px;
-    background-color: hsla(0, 100%, 30%, 0.3);
+    background-color: hsla(170, 5%, 95%, 1);
  ;
 }
 
@@ -100,3 +100,12 @@ h3 {
         font-size: 30px;
     }
 }
+
+.teacher_info {
+    margin-top: 10px;
+}
+
+.gravatar {
+    border-radius: 20px;    
+}
+

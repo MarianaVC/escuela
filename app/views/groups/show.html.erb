@@ -1,0 +1,37 @@
+<p>
+	</br>
+	</br>
+	<h1>
+	<%= @group.name %>
+	</h1>
+</p>
+<div class= "row">
+	<div class= "col-md-4 pull-right center">
+		<%=gravatar_for @group.teacher, size:200 %>
+		<p>
+			<h5> Group teacher: <%= @group.teacher.name%></h5>
+		</p>
+	</div>
+	<div class="col-md-8">
+		<h3>Group: </h3>
+		<div class="well">
+			<p>
+				<h7><strong>Group level: </strong><%= @group.level %></h7>
+				<h7><strong>Class duration: </strong><%= @group.time_class %></h7>
+				<h7><strong>Group state</strong><%= @group.state %></h7>
+				<div class= "well">
+				<h7><strong>Class on: </strong> </h7>
+				
+				<h7><strong></strong><%= @group.monday %></h7>
+				<h7><strong></strong><%= @group.tuesday %></h7>
+				<h7><strong></strong><%= @group.wednesday %></h7>
+				<h7><strong></strong><%= @group.thursday %></h7>
+				<h7><strong></strong><%= @group.friday %></h7>
+				</div>
+				<h7><strong>Group created at: </strong><%= @group.created_at%></h7>
+			</p>
+		</div>
+		
+		
+	</div>
+</div>
